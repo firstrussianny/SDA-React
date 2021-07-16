@@ -26,6 +26,7 @@ export interface HeaderLocale {
     thoughts: string;
     updates: string;
     giving: string;
+    liveStream: string;
 }
 
 interface HeaderState {
@@ -207,6 +208,17 @@ class Header extends React.Component<WithTranslation, HeaderState> {
                                         </a>
                                     </Link>
                                 </li>
+                                <li
+                                    className={`nav-item ${this.getCurrentClass(
+                                        '/youtube',
+                                    )}`}
+                                >
+                                    <Link href="/live-stream">
+                                        <a className="nav-link hvr-overline-from-center">
+                                            {headerLocales.liveStream}
+                                        </a>
+                                    </Link>
+                                </li>
                                 <li className="nav-item">
                                     <a
                                         className="nav-link hvr-overline-from-center"
@@ -364,6 +376,18 @@ class Header extends React.Component<WithTranslation, HeaderState> {
                                 <Link href="/thoughts">
                                     <a className="nav-link hvr-overline-from-center">
                                         {headerLocales.thoughts}
+                                    </a>
+                                </Link>
+                            </li>
+                            <li
+                                className={`nav-item ${this.getCurrentClass(
+                                    '/youtube',
+                                )}`}
+                                onClick={this.closeMenu}
+                            >
+                                <Link href="/youtube">
+                                    <a className="nav-link hvr-overline-from-center">
+                                        {headerLocales.liveStream}
                                     </a>
                                 </Link>
                             </li>

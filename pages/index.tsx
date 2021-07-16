@@ -3,7 +3,6 @@ import { WithTranslation } from 'react-i18next';
 import { NextPageContext } from 'next';
 import React from 'react';
 
-import { ChildrenVideo } from '../components/home/ChildrenVideo.component';
 import { GatherOnline } from '../components/home/GatherOnline.component';
 import PrayerRequest from '../components/home/PrayerRequest.component';
 import { Giving } from '../components/home/Giving.component';
@@ -98,8 +97,6 @@ class Homepage extends React.Component<HomepageProps> {
                 </Container>
 
                 <Giving i18n={i18n} t={t} tReady={tReady} />
-
-                <ChildrenVideo i18n={i18n} t={t} tReady={tReady} />
 
                 <Container>
                     <PrayerRequest i18n={i18n} t={t} tReady={tReady} />
